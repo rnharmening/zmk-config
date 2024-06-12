@@ -53,49 +53,33 @@
 
     combos {
         compatible = "zmk,combos";
+        combo_enter {
+            timeout-ms = <50>;
+            key-positions = <31 32>;
+            bindings = <&kp ENTER>;
+        };
+
         combo_esc {
             timeout-ms = <50>;
-            key-positions = <0 1>;
+            key-positions = <16 17>;
             bindings = <&kp ESC>;
         };
 
-        combo_tab {
+        combo_at {
             timeout-ms = <50>;
-            key-positions = <10 11>;
-            bindings = <&kp TAB>;
+            key-positions = <1 2>;
+            bindings = <&kp AT>;
         };
 
-        combo_ralt {
+        combo_caps {
             timeout-ms = <50>;
-            key-positions = <17 16>;
-            bindings = <&kp RALT>;
+            key-positions = <14 15>;
+            bindings = <&kp CAPS>;
         };
-
-        combo_lalt {
-            timeout-ms = <50>;
-            key-positions = <11 12>;
-            bindings = <&kp LALT>;
-        };
-
-        combo_lgui {
-            timeout-ms = <50>;
-            key-positions = <12 13>;
-            bindings = <&kp LGUI>;
-        };
-
-
-       combo_rgui {
-            timeout-ms = <50>;
-            key-positions = <17 18>;
-            bindings = <&kp RGUI>;
-        };
-
-
-
     };
 
-        keymap {
-                compatible = "zmk,keymap";
+    keymap {
+        compatible = "zmk,keymap";
 
             default_layer {
         bindings = <
@@ -120,7 +104,7 @@
         &kp F11     &kp F12      &trans       &trans       &trans                &trans      &trans       &trans       &trans       &trans
         &kp N1      &rpi LALT N2 &rpi LCTL N3 &rpi LSFT N4 &kp N5                &kp N6      &rpi RSFT N7 &rpi RCTL N8 &rpi LALT N9 &kp N0
         &kp F1      &kp F2       &kp F3       &rpi LGUI F4 &kp F5                &kp F6      &rpi RALT F7 &kp F8       &kp F9       &kp F10
-                                &trans                  &trans                   &trans                   &trans          
+                                 &trans                     &trans               &trans                   &trans          
         >;
         };
 
@@ -129,7 +113,7 @@
         &kp F11     &kp F12      &trans       &trans       &trans                &trans      &trans       &trans       &trans       &trans
         &kp N1      &rpi LALT N2 &rpi LCTL N3 &rpi LSFT N4 &kp N5                &kp N6      &rpi RSFT N7 &rpi RCTL N8 &rpi LALT N9 &kp N0
         &kp F1      &kp F2       &kp F3       &rpi LGUI F4 &kp F5                &kp F6      &rpi RALT F7 &kp F8       &kp F9       &kp F10
-                                &trans                  &trans                   &trans                   &trans          
+                                 &trans                     &trans               &trans                   &trans          
         >;
         };
 
