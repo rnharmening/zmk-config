@@ -8,9 +8,13 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
+#include "../zmk-nodefree-config/helper.h"
+#include "../zmk-nodefree-config/international_chars/german.dtsi"
+
+
 #define DEFAULT   0
 #define SYMBOL    1
-#define NUMBER    2
+#define NAVIGA    2
 #define FUNCTN    3
 #define EXTRAS    4
 
@@ -70,6 +74,7 @@
         combo_esc {
             timeout-ms = <30>;
             key-positions = <16 17>;
+            layers = <DEFAULT>
             bindings = <&kpt ESC>;
         };
 
@@ -84,6 +89,33 @@
             key-positions = <14 15>;
             bindings = <&kpt CAPS>;
         };
+
+        // Layer Toggle combos
+        combo_default {
+            timeout-ms = <30>;
+            key-positions = <16 17>;
+            layers = <NAVIGA SYMBOL FUNCTN EXTRAS>
+            bindings = <&to DEFAULT>;
+        };
+
+        combo_number {
+            timeout-ms = <30>;
+            key-positions = <19 30>;
+            bindings = <&tog NAVIGA>;
+        };
+        
+        combo_symbol {
+            timeout-ms = <30>;
+            key-positions = <19 32>;
+            bindings = <&tog SYMBOL>;
+        };
+
+        combo_function {
+            timeout-ms = <30>;
+            key-positions = <19 33>;
+            bindings = <&tog FUNCTN>;
+        };
+        
     };
 
     keymap {
@@ -94,7 +126,7 @@
         &kp Q       &kp W       &kp E       &kp R       &kp T                       &kp Z       &kp U       &kp I       &kp O       &kp P
         &kp A       &rpi LALT S &rpi LCTL D &rpi LSFT F &kp G                       &kp H       &rpi RSFT J &rpi RCTL K &rpi LALT L &sl EXTRAS
         &kp Y       &kp X       &kp C       &rpi LGUI V &kp B                       &kp N       &rpi RALT M &kp CMMA    &kp DOT     &kp SCLN
-                                &lt NUMBER BKSP         &kp SPC                     &lt SYMBOL TAB          &lt FUNCTN K_APP
+                                &lt NAVIGA BKSP         &kp SPC                     &lt SYMBOL TAB          &lt FUNCTN K_APP
         >;
         };
 
@@ -107,11 +139,11 @@
         >;
         };
 
-            number_layer {
+            navigation_layer {
         bindings = <
-        &kp F11     &kp F12      &trans       &trans       &trans                &kp STAR    &kp PLUS     &kp MINUS    &kp KP_SLASH &kp EQUAL
-        &kp N1      &rpi LALT N2 &rpi LCTL N3 &rpi LSFT N4 &kp N5                &kp N6      &rpi RSFT N7 &rpi RCTL N8 &rpi LALT N9 &kp N0
-        &kp F1      &kp F2       &kp F3       &rpi LGUI F4 &kp F5                &kp F6      &rpi RALT F7 &kp F8       &kp F9       &kp F10
+        &trans      &trans       &trans       &trans        &trans               &trans      &trans       &trans       &trans       &trans    
+        &kp PG_UP   &kp LC(LEFT) &kp UP       &kp LC(RIGHT) &kp HOME             &trans      &trans       &trans       &trans       &trans    
+        &kp PG_DN   &kp LEFT     &kp DOWN     &kp RIGHT     &kp END              &trans      &trans       &trans       &trans       &trans    
                                  &trans                     &trans               &trans                   &trans          
         >;
         };
