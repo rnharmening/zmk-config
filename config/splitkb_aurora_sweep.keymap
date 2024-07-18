@@ -62,25 +62,25 @@
     combos {
         compatible = "zmk,combos";
         combo_enter {
-            timeout-ms = <50>;
+            timeout-ms = <30>;
             key-positions = <31 32>;
             bindings = <&kpt ENTER>;
         };
 
         combo_esc {
-            timeout-ms = <50>;
+            timeout-ms = <30>;
             key-positions = <16 17>;
             bindings = <&kpt ESC>;
         };
 
         combo_at {
-            timeout-ms = <50>;
+            timeout-ms = <30>;
             key-positions = <1 2>;
             bindings = <&kpt AT>;
         };
 
         combo_caps {
-            timeout-ms = <50>;
+            timeout-ms = <30>;
             key-positions = <14 15>;
             bindings = <&kpt CAPS>;
         };
