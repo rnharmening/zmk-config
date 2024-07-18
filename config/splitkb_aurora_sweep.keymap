@@ -64,25 +64,25 @@
         combo_enter {
             timeout-ms = <50>;
             key-positions = <31 32>;
-            bindings = <&kp ENTER>;
+            bindings = <&kpt ENTER>;
         };
 
         combo_esc {
             timeout-ms = <50>;
             key-positions = <16 17>;
-            bindings = <&kp ESC>;
+            bindings = <&kpt ESC>;
         };
 
         combo_at {
             timeout-ms = <50>;
             key-positions = <1 2>;
-            bindings = <&kp AT>;
+            bindings = <&kpt AT>;
         };
 
         combo_caps {
             timeout-ms = <50>;
             key-positions = <14 15>;
-            bindings = <&kp CAPS>;
+            bindings = <&kpt CAPS>;
         };
     };
 
