@@ -74,7 +74,7 @@
         combo_esc {
             timeout-ms = <30>;
             key-positions = <16 17>;
-            layers = <DEFAULT>
+            layers = <DEFAULT>;
             bindings = <&kpt ESC>;
         };
 
@@ -94,7 +94,7 @@
         combo_default {
             timeout-ms = <30>;
             key-positions = <16 17>;
-            layers = <NAVIGA SYMBOL FUNCTN EXTRAS>
+            layers = <NAVIGA SYMBOL FUNCTN EXTRAS>;
             bindings = <&to DEFAULT>;
         };
 
