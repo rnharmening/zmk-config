@@ -8,6 +8,7 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
+<<<<<<< HEAD
 #include "zmk-helpers/helper.h"
 
 // Source desired key-position labels
@@ -15,6 +16,10 @@
 
 // Source unicode-chars for desired languages
 #include "zmk-helpers/unicode-chars/german.dtsi"
+=======
+// #include "../zmk-nodefree-config/helper.h"
+// #include "../zmk-nodefree-config/international_chars/german.dtsi"
+>>>>>>> ef108baf686c324045adc6b5f41480bc8275a7cd
 
 
 #define DEFAULT   0
@@ -79,7 +84,7 @@
         combo_esc {
             timeout-ms = <30>;
             key-positions = <16 17>;
-            layers = <DEFAULT>
+            layers = <DEFAULT>;
             bindings = <&kpt ESC>;
         };
 
@@ -99,7 +104,7 @@
         combo_default {
             timeout-ms = <30>;
             key-positions = <16 17>;
-            layers = <NAVIGA SYMBOL FUNCTN EXTRAS>
+            layers = <NAVIGA SYMBOL FUNCTN EXTRAS>;
             bindings = <&to DEFAULT>;
         };
 
