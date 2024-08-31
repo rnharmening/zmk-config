@@ -13,8 +13,7 @@
 // Source desired key-position labels
 #include "zmk-helpers/key-labels/34.h" // 34 for aurora sweep
 
-// Source unicode-chars for desired languages
-#include "zmk-helpers/unicode-chars/german.dtsi"
+#include "keys_de"
 
 #define DEFAULT   0
 #define SYMBOL    1
@@ -127,18 +126,18 @@
 
             default_layer {
         bindings = <
-        &kp Q       &kp W       &kp E       &kp R       &kp T                       &kp Z       &kp U       &kp I       &kp O       &kp P
+        &kp Q       &kp W       &kp E       &kp R       &kp T                       &kp DE_Z    &kp U       &kp I       &kp O       &kp P
         &kp A       &rpi LALT S &rpi LCTL D &rpi LSFT F &kp G                       &kp H       &rpi RSFT J &rpi RCTL K &rpi LALT L &sl EXTRAS
-        &kp Y       &kp X       &kp C       &rpi LGUI V &kp B                       &kp N       &rpi RALT M &kp CMMA    &kp DOT     &kp SCLN
+        &kp DE_Y    &kp X       &kp C       &rpi LGUI V &kp B                       &kp N       &rpi RALT M &kp CMMA    &kp DOT     &kp SCLN
                                 &lt NAVIGA BKSP         &kp SPC                     &lt SYMBOL TAB          &lt FUNCTN K_APP
         >;
         };
 
             symbol_layer {
         bindings = <
-        &kp AT      &kp UNDER   &kp LBKT    &kp RBKT    &kp CARET                   &kp EXCL    &kp LT      &kp GT      &kp EQUAL   &kp AMPS
-        &kp BSLH    &kp FSLH    &kp LBRC    &kp RBRC    &kp STAR                    &kp QMARK   &kp LPAR    &kp RPAR    &kp MINUS   &trans
-        &kp HASH    &kp DOLLAR  &kp PIPE    &kp TILDE   &kp GRAVE                   &kp PLUS    &kp PERCENT &kp CMMA    &kp DOT     &trans
+        &kp DE_EURO    &kp DE_UNDER   &kp DE_LBKT    &kp DE_RBKT    &kp DE_CARET                   &kp DE_EXCL    &kp DE_LT      &kp DE_GT      &kp DE_EQUAL   &kp DE_AMPS
+        &kp DE_BSLH    &kp DE_FSLH    &kp DE_LBRC    &kp DE_RBRC    &kp DE_STAR                    &kp DE_QMARK   &kp DE_LPAR    &kp DE_RPAR    &kp DE_MINUS   &kp DE_MICRO
+        &kp DE_HASH    &kp DE_DOLLAR  &kp DE_PIPE    &kp DE_TILDE   &kp DE_GRAVE                   &kp DE_PLUS    &kp DE_PERCENT &kp DE_DQT     &kp DE_SQT     &kp DE_SECT
                                             &trans      &trans                      &trans      &trans
         >;
         };
