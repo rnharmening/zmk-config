@@ -86,7 +86,6 @@
         combo_backspace {
             timeout-ms = <30>;
             key-positions = <RT2 RT3>;
-            slow-release = true;
             layers = <DEFAULT>;
             bindings = <&kpt BKSP>;
         };
@@ -94,7 +93,6 @@
         combo_delete {
             timeout-ms = <30>;
             key-positions = <RB2 RB3>;
-            slow-release = true;
             layers = <DEFAULT>;
             bindings = <&kpt DEL>;
         };
