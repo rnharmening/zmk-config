@@ -74,6 +74,7 @@
 
     combos {
         compatible = "zmk,combos";
+
         combo_enter {
             timeout-ms = <30>;
             key-positions = <LH0 RH0>;
@@ -131,7 +132,7 @@
             bindings = <&to DEFAULT>;
         };
 
-        combo_default {
+        combo_gaming {
             timeout-ms = <30>;
             key-positions = <LT1 LT2 LT3>;
             layers = <NAVIGA>;
