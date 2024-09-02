@@ -88,7 +88,7 @@
             key-positions = <RT2 RT3>;
             slow-release;
             layers = <DEFAULT>;
-            bindings = <&kpt BKSP>;
+            bindings = <&kp BKSP>;
         };
 
         combo_delete {
@@ -96,7 +96,7 @@
             key-positions = <RB2 RB3>;
             slow-release;
             layers = <DEFAULT>;
-            bindings = <&kpt DEL>;
+            bindings = <&kp DEL>;
         };
 
         combo_tab {
