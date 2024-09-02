@@ -27,6 +27,10 @@
    tapping-term-ms = <180>;
 };
 
+&caps_word {
+    continue-list = <UNDERSCORE MINUS DE_UNDER DE_MINUS>;
+};
+
 / {
 
     behaviors {
@@ -174,7 +178,7 @@
         &kp DE_EURO    &kp DE_UNDER   &kp DE_LBKT    &kp DE_RBKT    &kp DE_CARET                   &kp DE_EXCL    &kp DE_LT      &kp DE_GT      &kp DE_EQUAL   &kp DE_AMPS
         &kp DE_BSLH    &kp DE_FSLH    &kp DE_LBRC    &kp DE_RBRC    &kp DE_STAR                    &kp DE_QMARK   &kp DE_LPAR    &kp DE_RPAR    &kp DE_MINUS   &kp DE_MICRO
         &kp DE_HASH    &kp DE_DOLLAR  &kp DE_PIPE    &kp DE_TILDE   &kp DE_GRAVE                   &kp DE_PLUS    &kp DE_PERCENT &kp DE_DQT     &kp DE_SQT     &kp DE_SECT
-                                            &trans                  &trans                         &trans                        &trans
+                                            &caps_word              &trans                         &trans                        &trans
         >;
         };
 
