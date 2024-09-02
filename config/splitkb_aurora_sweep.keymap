@@ -20,6 +20,8 @@
 #define NAVIGA    2
 #define FUNCTN    3
 #define EXTRAS    4
+#define GAME      5
+#define GAME2     6
 
 &lt {
    tapping-term-ms = <180>;
@@ -70,13 +72,14 @@
         compatible = "zmk,combos";
         combo_enter {
             timeout-ms = <30>;
-            key-positions = <31 32>;
+            key-positions = <LH0 RH0>;
+            layers = <DEFAULT>;
             bindings = <&kpt ENTER>;
         };
 
         combo_esc {
             timeout-ms = <30>;
-            key-positions = <16 17>;
+            key-positions = <RM1 RM2>;
             layers = <DEFAULT>;
             bindings = <&kpt ESC>;
         };
@@ -84,12 +87,14 @@
         combo_at {
             timeout-ms = <30>;
             key-positions = <1 2>;
+            layers = <DEFAULT>;
             bindings = <&kpt AT>;
         };
 
         combo_caps {
             timeout-ms = <30>;
             key-positions = <14 15>;
+            layers = <DEFAULT>;
             bindings = <&kpt CAPS>;
         };
 
@@ -104,18 +109,21 @@
         combo_number {
             timeout-ms = <30>;
             key-positions = <19 30>;
+            layers = <DEFAULT NAVIGA>;
             bindings = <&tog NAVIGA>;
         };
         
         combo_symbol {
             timeout-ms = <30>;
             key-positions = <19 32>;
+            layers = <DEFAULT SYMBOL>;
             bindings = <&tog SYMBOL>;
         };
 
         combo_function {
             timeout-ms = <30>;
             key-positions = <19 33>;
+            layers = <DEFAULT FUNCTN>;
             bindings = <&tog FUNCTN>;
         };
         
@@ -169,5 +177,22 @@
         >;
         };
 
+            game_layer {
+        bindings = <
+        &sk LALT    &kp DE_Z     &kp X        &kp C        &kp V                 &trans      &trans       &trans       &trans       &trans       
+        &kp LSFT    &kp Q        &kp W        &kp E        &kp R                 &trans      &trans       &trans       &trans       &trans       
+        &kp LCTL    &kp A        &kp S        &kp D        &kp F                 &trans      &trans       &trans       &trans       &trans       
+                                 &mo GAME2                 &kp SPACE             &to DEFAULT              &trans          
+        >;
+        };
+
+            game2_layer {
+        bindings = <
+        &trans      &kp 1        &kp 2        &kp 3        &kp T                 &trans      &trans       &trans       &trans       &trans
+        &trans      &kp 4        &kp 5        &kp 6        &kp G                 &trans      &trans       &trans       &trans       &trans       
+        &trans      &kp 7        &kp 8        &kp 9        &kp B                 &trans      &trans       &trans       &trans       &trans       
+                                 &trans                    &trans                &trans                   &trans          
+        >;
+        };
     };
 };
