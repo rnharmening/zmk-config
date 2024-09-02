@@ -77,6 +77,27 @@
             bindings = <&kpt ENTER>;
         };
 
+        combo_backspace {
+            timeout-ms = <30>;
+            key-positions = <RT2 RT3>;
+            layers = <DEFAULT>;
+            bindings = <&kpt BKSP>;
+        };
+
+        combo_delete {
+            timeout-ms = <30>;
+            key-positions = <RB2 RB3>;
+            layers = <DEFAULT>;
+            bindings = <&kpt DEL>;
+        };
+
+        combo_tab {
+            timeout-ms = <30>;
+            key-positions = <LB2 LB3>;
+            layers = <DEFAULT>;
+            bindings = <&kpt TAB>;
+        };
+
         combo_esc {
             timeout-ms = <30>;
             key-positions = <RM1 RM2>;
@@ -86,14 +107,14 @@
 
         combo_at {
             timeout-ms = <30>;
-            key-positions = <1 2>;
+            key-positions = <LT2 LT3>;
             layers = <DEFAULT>;
             bindings = <&kpt AT>;
         };
 
         combo_caps {
             timeout-ms = <30>;
-            key-positions = <14 15>;
+            key-positions = <LM0 RM0>;
             layers = <DEFAULT>;
             bindings = <&kpt CAPS>;
         };
@@ -101,28 +122,35 @@
         // Layer Toggle combos
         combo_default {
             timeout-ms = <30>;
-            key-positions = <16 17>;
-            layers = <NAVIGA SYMBOL FUNCTN EXTRAS>;
+            key-positions = <RM1 RM2>;
+            layers = <NAVIGA SYMBOL FUNCTN EXTRAS GAME>;
             bindings = <&to DEFAULT>;
+        };
+
+        combo_default {
+            timeout-ms = <30>;
+            key-positions = <LT1 LT2 LT3>;
+            layers = <NAVIGA>;
+            bindings = <&tog GAME>;
         };
 
         combo_number {
             timeout-ms = <30>;
-            key-positions = <19 30>;
+            key-positions = <RM4 LH1>;
             layers = <DEFAULT NAVIGA>;
             bindings = <&tog NAVIGA>;
         };
         
         combo_symbol {
             timeout-ms = <30>;
-            key-positions = <19 32>;
+            key-positions = <RM4 RH0>;
             layers = <DEFAULT SYMBOL>;
             bindings = <&tog SYMBOL>;
         };
 
         combo_function {
             timeout-ms = <30>;
-            key-positions = <19 33>;
+            key-positions = <RM4 RH1>;
             layers = <DEFAULT FUNCTN>;
             bindings = <&tog FUNCTN>;
         };
@@ -137,7 +165,7 @@
         &kp Q       &kp W       &kp E       &kp R       &kp T                       &kp DE_Z    &kp U       &kp I       &kp O       &kp P
         &kp A       &rpi LALT S &rpi LCTL D &rpi LSFT F &kp G                       &kp H       &rpi RSFT J &rpi RCTL K &rpi LALT L &sl EXTRAS
         &kp DE_Y    &kp X       &kp C       &rpi LGUI V &kp B                       &kp N       &rpi RALT M &kp CMMA    &kp DOT     &kp SCLN
-                                &lt NAVIGA BKSP         &kp SPC                     &lt SYMBOL TAB          &lt FUNCTN K_APP
+                                &mo NAVIGA              &kp SPC                     &mo SYMBOL              &lt FUNCTN K_APP
         >;
         };
 
@@ -146,7 +174,7 @@
         &kp DE_EURO    &kp DE_UNDER   &kp DE_LBKT    &kp DE_RBKT    &kp DE_CARET                   &kp DE_EXCL    &kp DE_LT      &kp DE_GT      &kp DE_EQUAL   &kp DE_AMPS
         &kp DE_BSLH    &kp DE_FSLH    &kp DE_LBRC    &kp DE_RBRC    &kp DE_STAR                    &kp DE_QMARK   &kp DE_LPAR    &kp DE_RPAR    &kp DE_MINUS   &kp DE_MICRO
         &kp DE_HASH    &kp DE_DOLLAR  &kp DE_PIPE    &kp DE_TILDE   &kp DE_GRAVE                   &kp DE_PLUS    &kp DE_PERCENT &kp DE_DQT     &kp DE_SQT     &kp DE_SECT
-                                            &trans      &trans                                         &trans      &trans
+                                            &trans                  &trans                         &trans                        &trans
         >;
         };
 
