@@ -117,7 +117,7 @@
             timeout-ms = <30>;
             key-positions = <LT2 LT3>;
             layers = <DEFAULT>;
-            bindings = <&kpt AT>;
+            bindings = <&kpt DE_AT>;
         };
 
         combo_caps {
