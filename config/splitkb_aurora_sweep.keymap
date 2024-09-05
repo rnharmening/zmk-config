@@ -107,6 +107,7 @@ ZMK_BEHAVIOR(befundung, macro,
             timeout-ms = <30>;
             key-positions = <RB2 RB3>;
             slow-release;
+            require-prior-idle-ms = <125>;
             layers = <DEFAULT>;
             bindings = <&kp DEL>;
         };
@@ -128,6 +129,7 @@ ZMK_BEHAVIOR(befundung, macro,
         combo_at {
             timeout-ms = <30>;
             key-positions = <LT2 LT3>;
+            require-prior-idle-ms = <125>;
             layers = <DEFAULT>;
             bindings = <&kpt DE_AT>;
         };
@@ -135,6 +137,7 @@ ZMK_BEHAVIOR(befundung, macro,
         combo_caps {
             timeout-ms = <30>;
             key-positions = <LM0 RM0>;
+            require-prior-idle-ms = <125>;
             layers = <DEFAULT>;
             bindings = <&kpt CAPS>;
         };
@@ -150,6 +153,7 @@ ZMK_BEHAVIOR(befundung, macro,
         combo_default {
             timeout-ms = <30>;
             key-positions = <RM1 RM2>;
+            require-prior-idle-ms = <250>;
             layers = <NAVIGA SYMBOL FUNCTN EXTRAS GAME>;
             bindings = <&to DEFAULT>;
         };
@@ -157,6 +161,7 @@ ZMK_BEHAVIOR(befundung, macro,
         combo_gaming {
             timeout-ms = <30>;
             key-positions = <LT1 LT2 LT3>;
+            require-prior-idle-ms = <250>;
             layers = <NAVIGA>;
             bindings = <&tog GAME>;
         };
@@ -164,6 +169,7 @@ ZMK_BEHAVIOR(befundung, macro,
         combo_number {
             timeout-ms = <30>;
             key-positions = <RM4 LH1>;
+            require-prior-idle-ms = <250>;
             layers = <DEFAULT NAVIGA>;
             bindings = <&tog NAVIGA>;
         };
@@ -171,6 +177,7 @@ ZMK_BEHAVIOR(befundung, macro,
         combo_symbol {
             timeout-ms = <30>;
             key-positions = <RM4 RH0>;
+            require-prior-idle-ms = <250>;
             layers = <DEFAULT SYMBOL>;
             bindings = <&tog SYMBOL>;
         };
@@ -178,6 +185,7 @@ ZMK_BEHAVIOR(befundung, macro,
         combo_function {
             timeout-ms = <30>;
             key-positions = <RM4 RH1>;
+            require-prior-idle-ms = <250>;
             layers = <DEFAULT FUNCTN>;
             bindings = <&tog FUNCTN>;
         };
@@ -191,7 +199,7 @@ ZMK_BEHAVIOR(befundung, macro,
         bindings = <
         &kp Q       &kp W       &kp E       &kp R       &kp T                       &kp DE_Z    &kp U       &kp I       &kp O       &kp P
         &kp A       &rpi LALT S &rpi LCTL D &rpi LSFT F &kp G                       &kp H       &rpi RSFT J &rpi RCTL K &rpi LALT L &sl EXTRAS
-        &kp DE_Y    &kp X       &kp C       &rpi LGUI V &kp B                       &kp N       &rpi RALT M &kp CMMA    &kp DOT     &kp SCLN
+        &kp DE_Y    &kp X       &kp C       &rpi LGUI V &kp B                       &kp N       &rpi RALT M &kp CMMA    &kp DOT     &key_repeat
                                 &mo NAVIGA              &kp SPC                     &mo SYMBOL              &lt FUNCTN K_APP
         >;
         };
