@@ -32,13 +32,13 @@
     continue-list = <UNDERSCORE MINUS DE_UNDER DE_MINUS DEL BKSP>;
 };
 
-ZMK_BEHAVIOR(sel, macro,
+ZMK_BEHAVIOR(sel_from, macro,
     wait-ms = <10>;
     tap-ms = <16>;
     bindings = < &kp S &kp DE_E &kp DE_L &kp DE_E &kp DE_C &kp DE_T &kp SPACE  &kp DE_STAR &kp SPACE  &kp DE_F &kp DE_R &kp DE_O &kp DE_M &kp SPACE>;
 )
 
-ZMK_BEHAVIOR(bef, macro,
+ZMK_BEHAVIOR(befundung, macro,
     wait-ms = <10>;
     tap-ms = <16>;
     bindings = < &kp DE_B &kp DE_E &kp DE_F &kp DE_U &kp DE_N &kp DE_D &kp DE_U &kp DE_N &kp DE_G >;
@@ -227,7 +227,7 @@ ZMK_BEHAVIOR(bef, macro,
         bindings = <
         &trans               &trans       &trans       &trans       &trans               &trans       &kp DE_U_UMLAUT  &trans       &kp DE_O_UMLAUT &trans
         &kp DE_A_UMLAUT      &kp DE_SZ    &trans       &trans       &trans               &trans       &trans           &trans       &trans          &trans
-        &trans               &macro sel   &macro bef   &trans       &trans               &trans       &kp DE_MU        &trans       &trans          &trans
+        &trans               &sel_from    &befundung   &trans       &trans               &trans       &kp DE_MU        &trans       &trans          &trans
                                           &trans                    &trans               &trans                    &trans          
         >;
         };
