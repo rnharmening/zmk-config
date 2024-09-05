@@ -32,6 +32,18 @@
     continue-list = <UNDERSCORE MINUS DE_UNDER DE_MINUS DEL BKSP>;
 };
 
+ZMK_BEHAVIOR(sel, macro,
+    wait-ms = <10>;
+    tap-ms = <16>;
+    bindings = < &kp S &kp DE_E &kp DE_L &kp DE_E &kp DE_C &kp DE_T &kp SPACE  &kp DE_STAR &kp SPACE  &kp DE_F &kp DE_R &kp DE_O &kp DE_M &kp SPACE>;
+)
+
+ZMK_BEHAVIOR(bef, macro,
+    wait-ms = <10>;
+    tap-ms = <16>;
+    bindings = < &kp DE_B &kp DE_E &kp DE_F &kp DE_U &kp DE_N &kp DE_D &kp DE_U &kp DE_N &kp DE_G >;
+)
+
 / {
 
     behaviors {
@@ -101,9 +113,9 @@
 
         combo_tab {
             timeout-ms = <30>;
-            key-positions = <LB2 LB3>;
+            key-positions = <LM1 LM2>;
             layers = <DEFAULT>;
-            bindings = <&kpt TAB>;
+            bindings = <&kp TAB>;
         };
 
         combo_esc {
@@ -125,6 +137,13 @@
             key-positions = <LM0 RM0>;
             layers = <DEFAULT>;
             bindings = <&kpt CAPS>;
+        };
+
+        combo_caps_word {
+            timeout-ms = <30>;
+            key-positions = <LM1 RM1>;
+            layers = <DEFAULT>;
+            bindings = <&kpt caps_word>;
         };
 
         // Layer Toggle combos
@@ -208,7 +227,7 @@
         bindings = <
         &trans               &trans       &trans       &trans       &trans               &trans       &kp DE_U_UMLAUT  &trans       &kp DE_O_UMLAUT &trans
         &kp DE_A_UMLAUT      &kp DE_SZ    &trans       &trans       &trans               &trans       &trans           &trans       &trans          &trans
-        &trans               &trans       &trans       &trans       &trans               &trans       &kp DE_MU        &trans       &trans          &trans
+        &trans               &macro sel   &macro bef   &trans       &trans               &trans       &kp DE_MU        &trans       &trans          &trans
                                           &trans                    &trans               &trans                    &trans          
         >;
         };
