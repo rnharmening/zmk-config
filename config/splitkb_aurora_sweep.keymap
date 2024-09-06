@@ -24,6 +24,10 @@
 #define GAME2     6
 #define BLUETOOTH 7
 
+#define SHORT_IDLE 125
+#define MEDIUM_IDLE 200
+#define LONG_IDLE 325
+
 &lt {
    tapping-term-ms = <180>;
 };
@@ -62,6 +66,7 @@ ZMK_BEHAVIOR(befundung, macro,
             tapping-term-ms = <180>;    // <---[[moderate duration = 200]]
             quick-tap-ms = <0>;
             flavor = "balanced";
+            require-prior-idle-ms = <SHORT_IDLE>;
             bindings = <&kp>, <&kpt>;
         };
 
@@ -80,7 +85,7 @@ ZMK_BEHAVIOR(befundung, macro,
             tapping-term-ms = <180>;    // <---[[moderate duration = 200]]
             quick-tap-ms = <0>;
             flavor = "balanced";
-            require-prior-idle-ms = <125>;
+            require-prior-idle-ms = <LONG_IDLE>;
             bindings = <&kp>, <&kpt>;
         };
     };
@@ -107,7 +112,7 @@ ZMK_BEHAVIOR(befundung, macro,
             timeout-ms = <30>;
             key-positions = <RB2 RB3>;
             slow-release;
-            require-prior-idle-ms = <125>;
+            require-prior-idle-ms = <SHORT_IDLE>;
             layers = <DEFAULT>;
             bindings = <&kp DEL>;
         };
@@ -129,7 +134,7 @@ ZMK_BEHAVIOR(befundung, macro,
         combo_at {
             timeout-ms = <30>;
             key-positions = <LT2 LT3>;
-            require-prior-idle-ms = <125>;
+            require-prior-idle-ms = <SHORT_IDLE>;
             layers = <DEFAULT>;
             bindings = <&kpt DE_AT>;
         };
@@ -137,7 +142,7 @@ ZMK_BEHAVIOR(befundung, macro,
         combo_caps {
             timeout-ms = <30>;
             key-positions = <LM0 RM0>;
-            require-prior-idle-ms = <125>;
+            require-prior-idle-ms = <SHORT_IDLE>;
             layers = <DEFAULT>;
             bindings = <&kpt CAPS>;
         };
@@ -198,7 +203,7 @@ ZMK_BEHAVIOR(befundung, macro,
             default_layer {
         bindings = <
         &kp Q       &kp W       &kp E       &kp R       &kp T                       &kp DE_Z    &kp U       &kp I       &kp O       &kp P
-        &kp A       &rpi LALT S &rpi LCTL D &rpi LSFT F &kp G                       &kp H       &rpi RSFT J &rpi RCTL K &rpi LALT L &sl EXTRAS
+        &kp A       &rpi LALT S &rpi LCTL D &bhm LSFT F &kp G                       &kp H       &bhm RSFT J &rpi RCTL K &rpi LALT L &sl EXTRAS
         &kp DE_Y    &kp X       &kp C       &rpi LGUI V &kp B                       &kp N       &rpi RALT M &kp CMMA    &kp DOT     &key_repeat
                                 &mo NAVIGA              &kp SPC                     &mo SYMBOL              &lt FUNCTN K_APP
         >;
