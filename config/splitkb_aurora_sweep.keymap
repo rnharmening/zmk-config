@@ -203,7 +203,7 @@ ZMK_BEHAVIOR(befundung, macro,
             default_layer {
         bindings = <
         &kp Q       &kp W       &kp E       &kp R       &kp T                       &kp DE_Z    &kp U       &kp I       &kp O       &kp P
-        &kp A       &rpi LALT S &rpi LCTL D &bhm LSFT F &kp G                       &kp H       &bhm RSFT J &rpi RCTL K &rpi LALT L &sl EXTRAS
+        &kp A       &rpi LALT S &bhm LCTL D &bhm LSFT F &kp G                       &kp H       &bhm RSFT J &bhm RCTL K &rpi LALT L &sl EXTRAS
         &kp DE_Y    &kp X       &kp C       &rpi LGUI V &kp B                       &kp N       &rpi RALT M &kp CMMA    &kp DOT     &key_repeat
                                 &mo NAVIGA              &kp SPC                     &mo SYMBOL              &lt FUNCTN K_APP
         >;
