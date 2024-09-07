@@ -48,6 +48,13 @@ ZMK_BEHAVIOR(befundung, macro,
     bindings = < &kp DE_B &kp DE_E &kp DE_F &kp DE_U &kp DE_N &kp DE_D &kp DE_U &kp DE_N &kp DE_G >;
 )
 
+ZMK_BEHAVIOR(usn, macro,
+    wait-ms = <10>;
+    tap-ms = <16>;
+    bindings = < &kp DE_R &kp DE_H &kp DE_A &kp DE_R &kp DE_M &kp DE_E &kp DE_N &kp DE_I &kp DE_N &kp DE_G >;
+)
+
+
 / {
 
     behaviors {
@@ -153,6 +160,14 @@ ZMK_BEHAVIOR(befundung, macro,
             layers = <DEFAULT>;
             bindings = <&caps_word>;
         };
+
+        combo_usn {
+            timeout-ms = <30>;
+            key-positions = <LT1 RM0>;
+            layers = <DEFAULT>;
+            bindings = <&usn>;
+        };
+
 
         // Layer Toggle combos
         combo_default {
