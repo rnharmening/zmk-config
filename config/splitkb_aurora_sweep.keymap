@@ -74,7 +74,7 @@ ZMK_BEHAVIOR(usn, macro,
             quick-tap-ms = <0>;
             flavor = "balanced";
             require-prior-idle-ms = <SHORT_IDLE>;
-            bindings = <&kp>, <&kpt>;
+            bindings = <&kp>, <&kp>;
         };
 
         shm: slow_homerow_mods {
@@ -83,7 +83,7 @@ ZMK_BEHAVIOR(usn, macro,
             tapping-term-ms = <255>;    // <---[[moderate duration = 200]]
             quick-tap-ms = <0>;
             flavor = "balanced";
-            bindings = <&kp>, <&kpt>;
+            bindings = <&kp>, <&kp>;
         };
         
         rpi: require_prior_idle {
@@ -93,7 +93,7 @@ ZMK_BEHAVIOR(usn, macro,
             quick-tap-ms = <0>;
             flavor = "balanced";
             require-prior-idle-ms = <LONG_IDLE>;
-            bindings = <&kp>, <&kpt>;
+            bindings = <&kp>, <&kp>;
         };
     };
 
