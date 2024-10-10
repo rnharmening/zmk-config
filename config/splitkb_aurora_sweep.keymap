@@ -56,6 +56,34 @@ ZMK_BEHAVIOR(usn, macro,
     bindings = < &kp DE_R &kp DE_H &kp DE_A &kp DE_R &kp DE_M &kp DE_E &kp DE_N &kp DE_I &kp DE_N &kp DE_G >;
 )
 
+// Tap dance for closing/opening parentheses etc.
+ZMK_TAP_DANCE(td_bkt,
+    tapping-term-ms = <150>
+    bindings = <&kp DE_LBKT>, <&kp DE_RBKT>;
+)
+
+ZMK_TAP_DANCE(td_brc,
+    tapping-term-ms = <150>
+    bindings = <&kp DE_LBRC>, <&kp DE_RBRC>;
+)
+
+ZMK_TAP_DANCE(td_lgt,
+    tapping-term-ms = <150>
+    bindings = <&kp DE_LT>, <&kp DE_GT>;
+)
+
+ZMK_TAP_DANCE(td_par,
+    tapping-term-ms = <150>
+    bindings = <&kp DE_LPAR>, <&kp DE_RPAR>;
+)
+
+
+
+
+
+
+
+
 
 / {
 
@@ -228,8 +256,8 @@ ZMK_BEHAVIOR(usn, macro,
 
             symbol_layer {
         bindings = <
-        &kp DE_EURO    &kp DE_UNDER   &kp DE_LBKT    &kp DE_RBKT    &kp DE_CARET                   &kp DE_EXCL    &kp DE_LT      &kp DE_GT      &kp DE_EQUAL   &kp DE_AMPS
-        &kp DE_BSLH    &kp DE_FSLH    &kp DE_LBRC    &kp DE_RBRC    &kp DE_STAR                    &kp DE_QMARK   &kp DE_LPAR    &kp DE_RPAR    &kp DE_MINUS   &kp DE_MICRO
+        &kp DE_EURO    &kp DE_UNDER   &td_bkt        &td_lgt        &kp DE_CARET                   &kp DE_EXCL    &kp DE_DEG     &kp DE_ACUTE   &kp DE_EQUAL   &kp DE_AMPS
+        &kp DE_BSLH    &kp DE_FSLH    &td_par        &td_brc        &kp DE_STAR                    &kp DE_QMARK   &kp DE_COLON   &kp DE_SEMI    &kp DE_MINUS   &kp DE_MICRO
         &kp DE_HASH    &kp DE_DOLLAR  &kp DE_PIPE    &kp DE_TILDE   &kp DE_GRAVE                   &kp DE_PLUS    &kp DE_PERCENT &kp DE_DQT     &kp DE_SQT     &kp DE_SECT
                                             &caps_word              &trans                         &trans                        &trans
         >;
