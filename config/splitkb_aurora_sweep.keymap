@@ -61,23 +61,24 @@ ZMK_BEHAVIOR(usn, macro,
 )
 
 // Tap dance for closing/opening parentheses etc.
+#define TAP_DANCE_DELAY 190
 ZMK_TAP_DANCE(td_bkt,
-    tapping-term-ms = <150>;
+    tapping-term-ms = <TAP_DANCE_DELAY>;
     bindings = <&kp DE_LBKT>, <&kp DE_RBKT>;
 )
 
 ZMK_TAP_DANCE(td_brc,
-    tapping-term-ms = <150>;
+    tapping-term-ms = <TAP_DANCE_DELAY>;
     bindings = <&kp DE_LBRC>, <&kp DE_RBRC>;
 )
 
 ZMK_TAP_DANCE(td_lgt,
-    tapping-term-ms = <150>;
+    tapping-term-ms = <TAP_DANCE_DELAY>;
     bindings = <&kp DE_LT>, <&kp DE_GT>;
 )
 
 ZMK_TAP_DANCE(td_par,
-    tapping-term-ms = <150>;
+    tapping-term-ms = <TAP_DANCE_DELAY>;
     bindings = <&kp DE_LPAR>, <&kp DE_RPAR>;
 )
 
@@ -85,7 +86,7 @@ ZMK_TAP_DANCE(td_par,
 
 ZMK_HOLD_TAP(fml,
     flavor = "balanced";
-    tapping-term-ms = <180>;
+    tapping-term-ms = <280>;
     quick-tap-ms = <0>;
     require-prior-idle-ms = <SHORT_IDLE>;
     hold-trigger-key-positions = <KEYS_R THUMBS LB1 LB2 LB3>;
@@ -94,7 +95,7 @@ ZMK_HOLD_TAP(fml,
 )
 ZMK_HOLD_TAP(fmr,
     flavor = "balanced";
-    tapping-term-ms = <180>;
+    tapping-term-ms = <280>;
     quick-tap-ms = <0>;
     require-prior-idle-ms = <SHORT_IDLE>;
     hold-trigger-key-positions = <KEYS_L THUMBS>;
@@ -104,7 +105,7 @@ ZMK_HOLD_TAP(fmr,
 
 ZMK_HOLD_TAP(sml,
     flavor = "balanced";
-    tapping-term-ms = <180>;
+    tapping-term-ms = <280>;
     quick-tap-ms = <0>;
     require-prior-idle-ms = <LONG_IDLE>;
     hold-trigger-key-positions = <KEYS_R THUMBS>;
@@ -113,7 +114,7 @@ ZMK_HOLD_TAP(sml,
 )
 ZMK_HOLD_TAP(smr,
     flavor = "balanced";
-    tapping-term-ms = <180>;
+    tapping-term-ms = <280>;
     quick-tap-ms = <0>;
     require-prior-idle-ms = <LONG_IDLE>;
     hold-trigger-key-positions = <KEYS_L THUMBS>;
