@@ -62,22 +62,22 @@ ZMK_BEHAVIOR(usn, macro,
 
 // Tap dance for closing/opening parentheses etc.
 ZMK_TAP_DANCE(td_bkt,
-    tapping-term-ms = <150>
+    tapping-term-ms = <150>;
     bindings = <&kp DE_LBKT>, <&kp DE_RBKT>;
 )
 
 ZMK_TAP_DANCE(td_brc,
-    tapping-term-ms = <150>
+    tapping-term-ms = <150>;
     bindings = <&kp DE_LBRC>, <&kp DE_RBRC>;
 )
 
 ZMK_TAP_DANCE(td_lgt,
-    tapping-term-ms = <150>
+    tapping-term-ms = <150>;
     bindings = <&kp DE_LT>, <&kp DE_GT>;
 )
 
 ZMK_TAP_DANCE(td_par,
-    tapping-term-ms = <150>
+    tapping-term-ms = <150>;
     bindings = <&kp DE_LPAR>, <&kp DE_RPAR>;
 )
 
