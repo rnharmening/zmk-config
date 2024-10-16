@@ -258,7 +258,7 @@ ZMK_HOLD_TAP(smr,
         &kp Q       &kp W       &kp E       &kp R        &kp T                       &kp DE_Z     &kp U       &kp I       &kp O       &kp P
         &kp A       &sml LALT S &fml LCTL D &fml LSFT F  &kp G                       &kp H        &fmr RSFT J &fmr RCTL K &smr LALT L &sl EXTRAS
         &kp DE_Y    &kp X       &kp C       &sml RGUI V  &sml RALT B                 &smr RALT N  &smr RGUI M &kp CMMA    &kp DOT     &key_repeat
-                                &kp LSHF                 &kp SPC                     &mo SYMBOL              &lt FUNCTN K_APP
+                                &kp LSFT                 &kp SPC                     &mo SYMBOL              &lt FUNCTN K_APP
         >;
         };
 
