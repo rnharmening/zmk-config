@@ -264,7 +264,7 @@ ZMK_HOLD_TAP(smr,
 
             symbol_layer {
         bindings = <
-        &kp DE_EURO    &kp DE_UNDER   &&kp DE_DEG    &kp DE_ACUTE   &kp DE_CARET                   &kp DE_EXCL    &kp DE_LT      &kp DE_GT      &kp DE_EQUAL   &kp DE_AMPS
+        &kp DE_EURO    &kp DE_UNDER   &kp DE_DEG     &kp DE_ACUTE   &kp DE_CARET                   &kp DE_EXCL    &kp DE_LT      &kp DE_GT      &kp DE_EQUAL   &kp DE_AMPS
         &kp DE_BSLH    &kp DE_FSLH    &td_lpb        &td_rpb        &kp DE_STAR                    &kp DE_QMARK   &kp DE_COLON   &kp DE_SEMI    &kp DE_MINUS   &kp DE_MICRO
         &kp DE_HASH    &kp DE_DOLLAR  &kp DE_PIPE    &kp DE_TILDE   &kp DE_GRAVE                   &kp DE_PLUS    &kp DE_PERCENT &kp DE_DQT     &kp DE_SQT     &kp DE_SECT
                                             &caps_word              &trans                         &trans                        &trans
