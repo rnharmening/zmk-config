@@ -176,6 +176,13 @@ ZMK_HOLD_TAP(smr,
             bindings = <&kpt ESC>;
         };
 
+        combo_esc_gaming {
+            timeout-ms = <TMS>;
+            key-positions = <RT3 RT4>;
+            layers = <GAME2>;
+            bindings = <&kpt ESC>;
+        };
+
         combo_at {
             timeout-ms = <TMS>;
             key-positions = <LT2 LT3>;
