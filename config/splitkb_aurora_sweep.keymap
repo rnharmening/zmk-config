@@ -78,12 +78,12 @@ ZMK_TAP_DANCE(td_lpb,
 
 ZMK_TAP_DANCE(td_rpb,
     tapping-term-ms = <TAP_DANCE_DELAY>;
-   bindings = <&kp DE_RPAR>, <&kp DE_RBRC>, <&kp DE_RBKT>;
+    bindings = <&kp DE_RPAR>, <&kp DE_RBRC>, <&kp DE_RBKT>;
 )
 
 ZMK_TAP_DANCE(td_nav_sft,
     tapping-term-ms = <TAP_DANCE_DELAY>;
-   bindings = <&mo NAVIGA>, <&kp LSFT>;
+    bindings = <&mo NAVIGA>, <&kp LSFT>;
 )
 
 // home row mods
@@ -270,7 +270,7 @@ ZMK_HOLD_TAP(smr,
         &kp Q       &kp W       &kp E       &kp R        &kp T                       &kp DE_Z     &kp U       &kp I       &kp O       &kp P
         &kp A       &sml LALT S &fml LCTL D &fml LSFT F  &kp G                       &kp H        &fmr RSFT J &fmr RCTL K &smr LALT L &sl EXTRAS
         &kp DE_Y    &kp X       &kp C       &sml RGUI V  &sml RALT B                 &smr RALT N  &smr RGUI M &kp CMMA    &kp DOT     &key_repeat
-                                &kp LSFT                 &kp SPC                     &mo SYMBOL              &lt FUNCTN K_APP
+                                &td_nav_sft              &kp SPC                     &mo SYMBOL              &lt FUNCTN K_APP
         >;
         };
 
