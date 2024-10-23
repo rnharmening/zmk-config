@@ -240,7 +240,7 @@ ZMK_HOLD_TAP(smr,
             timeout-ms = <TMS>;
             key-positions = <LT1 LT2 LT3>;
             require-prior-idle-ms = <250>;
-            layers = <NAVIGA>;
+            layers = <DEFAULT>;
             bindings = <&tog GAME>;
         };
         
