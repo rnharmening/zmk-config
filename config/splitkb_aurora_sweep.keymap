@@ -37,7 +37,7 @@
 #define GAME2     6
 #define BLUETOOTH 7
 
-#define SHORT_IDLE 125
+#define SHORT_IDLE 120
 #define MEDIUM_IDLE 200
 #define LONG_IDLE 325
 
@@ -90,7 +90,7 @@ ZMK_TAP_DANCE(td_nav_sft,
 
 ZMK_HOLD_TAP(fml,
     flavor = "balanced";
-    tapping-term-ms = <220>;
+    tapping-term-ms = <200>;
     quick-tap-ms = <0>;
     require-prior-idle-ms = <SHORT_IDLE>;
     hold-trigger-key-positions = <KEYS_R THUMBS KEYS_LT KEYS_LB>;
@@ -314,7 +314,7 @@ ZMK_HOLD_TAP(smr,
         bindings = <
         &kp LALT    &kp Q        &kp W        &kp E        &kp R                 &trans      &trans       &trans       &trans       &trans       
         &kp LSFT    &kp A        &kp S        &kp D        &kp F                 &trans      &trans       &trans       &trans       &trans       
-        &sk LCTL    &kp DE_Z     &kp X        &kp C        &kp V                 &trans      &trans       &trans       &trans       &trans       
+        &kp LCTL    &kp DE_Z     &kp X        &kp C        &kp V                 &trans      &trans       &trans       &trans       &trans       
                                  &mo GAME2                 &kp SPACE             &to DEFAULT              &trans          
         >;
         };
