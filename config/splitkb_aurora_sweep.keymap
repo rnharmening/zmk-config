@@ -92,12 +92,35 @@ ZMK_TAP_DANCE(td_nav_fnc_sft,
     bindings = <&mo NAVIGA>, <&mo FUNCTN>, <&kp LSFT>;
 )
 
-ZMK_TAP_DANCE(td_smb_sft
+ZMK_TAP_DANCE(td_smb_sft,
     tapping-term-ms = <TAP_DANCE_DELAY>;
     bindings = <&mo SYMBOL>, <&kp LSFT>;
 )
 
 // home row mods
+
+ZMK_HOLD_TAP(nlt,
+    flavor = "balanced";
+    tapping-term-ms = <200>;
+    bindings = <&kp>, <&kp>;
+)
+
+ZMK_HOLD_TAP(nml,
+    flavor = "balanced";
+    tapping-term-ms = <200>;
+    quick-tap-ms = <0>;
+    hold-trigger-key-positions = <KEYS_R THUMBS KEYS_LT KEYS_LB>;
+    hold-trigger-on-release;
+    bindings = <&kp>, <&kp>;
+)
+ZMK_HOLD_TAP(nmr,
+    flavor = "balanced";
+    tapping-term-ms = <220>;
+    quick-tap-ms = <0>;
+    hold-trigger-key-positions = <KEYS_L THUMBS KEYS_RT KEYS_RB>;
+    hold-trigger-on-release;
+    bindings = <&kp>, <&kp>;
+)
 
 ZMK_HOLD_TAP(fml,
     flavor = "balanced";
@@ -281,7 +304,7 @@ ZMK_HOLD_TAP(smr,
         &kp Q       &kp W       &kp E       &kp R        &kp T                       &kp DE_Z     &kp U       &kp I       &kp O       &kp P
         &kp A       &sml LALT S &fml LCTL D &fml LSFT F  &kp G                       &kp H        &fmr RSFT J &fmr RCTL K &smr LALT L &sl EXTRAS
         &kp DE_Y    &kp X       &kp C       &sml RGUI V  &sml RALT B                 &smr RALT N  &smr RGUI M &kp CMMA    &kp DOT     &key_repeat
-                                &td_nav_fnc_sft          &kp SPC                     &td_smb_sft              &lt FUNCTN K_APP
+                                &td_nav_fnc_sft          &kp SPC                     &td_smb_sft              &nlt RSFT K_APP
         >;
         };
 
