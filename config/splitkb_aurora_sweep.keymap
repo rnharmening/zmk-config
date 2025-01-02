@@ -97,9 +97,9 @@ ZMK_TAP_DANCE(td_smb_sft,
     bindings = <&mo SYMBOL>, <&kp LSFT>;
 )
 
-ZMK_TAP_DANCE(td_nav_sft,
+ZMK_TAP_DANCE(td_nav_fn_sft,
     tapping-term-ms = <TAP_DANCE_DELAY>;
-    bindings = <&mo NAVIGA>, <&kp LSFT>;
+    bindings = <&mo NAVIGA>, <&mo FUNCTN>, <&kp LSFT>;
 )
 
 // home row mods
@@ -309,7 +309,7 @@ ZMK_HOLD_TAP(smr,
         &kp Q       &kp W       &kp E       &kp R        &kp T                       &kp DE_Z     &kp U       &kp I       &kp O       &kp P
         &kp A       &sml LALT S &fml LCTL D &fml LSFT F  &kp G                       &kp H        &fmr RSFT J &fmr RCTL K &smr LALT L &sl EXTRAS
         &kp DE_Y    &kp X       &kp C       &sml RGUI V  &sml RALT B                 &smr RALT N  &smr RGUI M &kp CMMA    &kp DOT     &key_repeat
-                                &td_nav_sft              &kp SPC                     &td_smb_sft              &nlt RSFT K_APP
+                                &td_nav_fn_sft              &kp SPC                     &td_smb_sft              &nlt RSFT K_APP
         >;
         };
 
@@ -325,8 +325,8 @@ ZMK_HOLD_TAP(smr,
             navigation_layer {
         bindings = <
         &trans      &kp LALT     &kp LCTL     &kp LSFT      &trans               &td_lpb      &kp N7       &kp N8       &kp N9       &td_rpb
-        &kp PG_UP   &kp LC(LEFT) &kp UP       &kp LC(RIGHT) &kp HOME             &td_mp       &kp N4       &kp N5       &kp N6       &trans    
-        &kp PG_DN   &kp LEFT     &kp DOWN     &kp RIGHT     &kp END              &td_md       &kp N1       &kp N2       &kp N3       &trans    
+        &kp PG_UP   &kp LC(LEFT) &kp UP       &kp LC(RIGHT) &kp HOME             &td_md       &kp N4       &kp N5       &kp N6       &trans    
+        &kp PG_DN   &kp LEFT     &kp DOWN     &kp RIGHT     &kp END              &td_mp       &kp N1       &kp N2       &kp N3       &trans    
                                  &trans                     &trans               &trans       &kp N0
         >;
         };
