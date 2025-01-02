@@ -87,9 +87,14 @@ ZMK_TAP_DANCE(td_rpb,
     bindings = <&kp DE_RPAR>, <&kp DE_RBRC>, <&kp DE_RBKT>;
 )
 
+// ZMK_TAP_DANCE(td_nav_fnc_sft,
+//     tapping-term-ms = <TAP_DANCE_DELAY>;
+//     bindings = <&mo NAVIGA>, <&mo FUNCTN>, <&kp LSFT>;
+// )
+
 ZMK_TAP_DANCE(td_nav_fnc_sft,
     tapping-term-ms = <TAP_DANCE_DELAY>;
-    bindings = <&mo NAVIGA>, <&mo FUNCTN>, <&kp LSFT>;
+    bindings = <&mo NAVIGA>, <&kp LSFT>;
 )
 
 ZMK_TAP_DANCE(td_smb_sft,
