@@ -72,9 +72,14 @@ ZMK_BEHAVIOR(usn, macro,
 // Tap dance for closing/opening parentheses etc.
 #define TAP_DANCE_DELAY 190
 
-ZMK_TAP_DANCE(ttd,
+ZMK_TAP_DANCE(td_mp,
     tapping-term-ms = <TAP_DANCE_DELAY>;
-    bindings = <&kp>, <&kp>;
+    bindings = <&kp DE_PLUS>, <&kp DE_MINUS>;
+)
+
+ZMK_TAP_DANCE(td_md,
+    tapping-term-ms = <TAP_DANCE_DELAY>;
+    bindings = <&kp DE_STAR>, <&kp DE_FSLH>;
 )
 
 ZMK_TAP_DANCE(td_lpb,
@@ -319,10 +324,10 @@ ZMK_HOLD_TAP(smr,
 
             navigation_layer {
         bindings = <
-        &trans      &kp LALT     &kp LCTL     &kp LSFT      &trans               &kp DE_LPAR                &kp N7       &kp N8       &kp N9       &kp DE_RPAR
-        &kp PG_UP   &kp LC(LEFT) &kp UP       &kp LC(RIGHT) &kp HOME             &ttd DE_STAR DE_FSLH       &kp N4       &kp N5       &kp N6       &trans    
-        &kp PG_DN   &kp LEFT     &kp DOWN     &kp RIGHT     &kp END              &ttd DE_PLUS DE_MINUS      &kp N1       &kp N2       &kp N3       &trans    
-                                 &trans                     &trans               &trans      &kp N0
+        &trans      &kp LALT     &kp LCTL     &kp LSFT      &trans               &td_lpb      &kp N7       &kp N8       &kp N9       &td_rpb
+        &kp PG_UP   &kp LC(LEFT) &kp UP       &kp LC(RIGHT) &kp HOME             &td_mp       &kp N4       &kp N5       &kp N6       &trans    
+        &kp PG_DN   &kp LEFT     &kp DOWN     &kp RIGHT     &kp END              &td_md       &kp N1       &kp N2       &kp N3       &trans    
+                                 &trans                     &trans               &trans       &kp N0
         >;
         };
 
