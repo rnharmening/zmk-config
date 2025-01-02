@@ -71,6 +71,12 @@ ZMK_BEHAVIOR(usn, macro,
 
 // Tap dance for closing/opening parentheses etc.
 #define TAP_DANCE_DELAY 190
+
+ZMK_TAP_DANCE(td2,
+    tapping-term-ms = <TAP_DANCE_DELAY>;
+    bindings = <&kp>, <&kp>;
+)
+
 ZMK_TAP_DANCE(td_lpb,
     tapping-term-ms = <TAP_DANCE_DELAY>;
     bindings = <&kp DE_LPAR>, <&kp DE_LBRC>, <&kp DE_LBKT>;
@@ -81,9 +87,14 @@ ZMK_TAP_DANCE(td_rpb,
     bindings = <&kp DE_RPAR>, <&kp DE_RBRC>, <&kp DE_RBKT>;
 )
 
-ZMK_TAP_DANCE(td_nav_sft,
+ZMK_TAP_DANCE(td_nav_fnc_sft,
     tapping-term-ms = <TAP_DANCE_DELAY>;
-    bindings = <&mo NAVIGA>, <&kp LSFT>;
+    bindings = <&mo NAVIGA>, <&mo FUNCTN>, <&kp LSFT>;
+)
+
+ZMK_TAP_DANCE(td_smb_sft
+    tapping-term-ms = <TAP_DANCE_DELAY>;
+    bindings = <&mo SYMBOL>, <&kp LSFT>;
 )
 
 // home row mods
@@ -270,7 +281,7 @@ ZMK_HOLD_TAP(smr,
         &kp Q       &kp W       &kp E       &kp R        &kp T                       &kp DE_Z     &kp U       &kp I       &kp O       &kp P
         &kp A       &sml LALT S &fml LCTL D &fml LSFT F  &kp G                       &kp H        &fmr RSFT J &fmr RCTL K &smr LALT L &sl EXTRAS
         &kp DE_Y    &kp X       &kp C       &sml RGUI V  &sml RALT B                 &smr RALT N  &smr RGUI M &kp CMMA    &kp DOT     &key_repeat
-                                &td_nav_sft              &kp SPC                     &mo SYMBOL              &lt FUNCTN K_APP
+                                &td_nav_fnc_sft          &kp SPC                     &td_smb_sft              &lt FUNCTN K_APP
         >;
         };
 
@@ -285,19 +296,20 @@ ZMK_HOLD_TAP(smr,
 
             navigation_layer {
         bindings = <
-        &trans      &trans       &trans       &trans        &trans               &trans      &trans       &trans       &trans       &trans    
-        &kp PG_UP   &kp LC(LEFT) &kp UP       &kp LC(RIGHT) &kp HOME             &trans      &trans       &trans       &trans       &trans    
-        &kp PG_DN   &kp LEFT     &kp DOWN     &kp RIGHT     &kp END              &trans      &trans       &trans       &trans       &trans    
-                                 &trans                     &trans               &trans                   &mo BLUETOOTH          
+        &trans      &kp LALT     &kp LCTL     &kp LSFT      &trans               &kp DE_LPAR                &kp N7       &kp N8       &kp N9       &kp DE_RPAR
+        &kp PG_UP   &kp LC(LEFT) &kp UP       &kp LC(RIGHT) &kp HOME             &td2 DE_STAR DE_FSLH       &kp N4       &kp N5       &kp N6       &trans    
+        &kp PG_DN   &kp LEFT     &kp DOWN     &kp RIGHT     &kp END              &td2 DE_PLUS DE_MINUS      &kp N1       &kp N2       &kp N3       &trans    
+                                 &trans                     &trans               &trans      &kp N0
         >;
         };
 
             function_layer {
         bindings = <
-        &kp F11     &kp F12      &kp CMMA     &kp DOT       &trans                &kp DE_STAR   &kp DE_PLUS  &kp DE_MINUS &kp DE_SLASH &kp DE_EQUAL
-        &kp N1      &sml LALT N2 &sml LCTL N3 &sml LSFT N4  &kp N5                &kp N6        &smr RSFT N7 &smr RCTL N8 &smr LALT N9 &kp N0
-        &kp F1      &kp F2       &kp F3       &sml LGUI F4  &sml RALT F5          &smr RALT  F6 &smr RGUI F7 &kp F8       &kp F9       &kp F10
-                                 &trans                     &trans                &trans                   &trans          
+        &trans      &kp LALT     &kp LCTL     &kp LSFT      &trans               &trans      &kp F7       &kp F8       &kp F9       &kp F12
+        &trans      &kp LALT     &kp LCTL     &kp LSFT      &trans               &trans      &kp F4       &kp F5       &kp F6       &kp F11
+        &trans      &trans       &trans       &trans        &trans               &trans      &kp F1       &kp F2       &kp F3       &kp F10
+                                 &trans                     &trans               &trans                   &mo BLUETOOTH          
+        >;
         >;
         };
 
