@@ -122,6 +122,10 @@ ZMK_HOLD_TAP(smr, // slow HRM Right
     bindings = <&kp>, <&kp>;
 )
 
+#include "combos.dtsi"
+
+
+
 / {
 
     behaviors {
@@ -135,8 +139,6 @@ ZMK_HOLD_TAP(smr, // slow HRM Right
         };
 
     };
-
-#include "combos.dtsi"
 
     combos {
         compatible = "zmk,combos";
