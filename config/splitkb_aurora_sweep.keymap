@@ -122,7 +122,14 @@ ZMK_HOLD_TAP(smr, // slow HRM Right
     bindings = <&kp>, <&kp>;
 )
 
-#include "combos.dtsi"
+#define COMBO_TERM_FAST 25
+#define COMBO_TERM_SLOW 45
+
+#define COMBO_IDLE_FAST 150
+#define COMBO_IDLE_SLOW 50
+
+
+ZMK_COMBO(mousecb, &smart_mouse, LT2 LT1,     DEFAULT, COMBO_TERM_FAST, COMBO_IDLE_FAST)
 
 
 
