@@ -14,7 +14,7 @@
 #include "zmk-helpers/key-labels/34.h" // 34 for aurora sweep
 
 #include "keys_de.h"
-#include "config/constants.keymap"
+#include "config/constants.dtsi"
 
 
 &lt {
