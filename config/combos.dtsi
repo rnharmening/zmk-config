@@ -1,24 +1,3 @@
-/*                KEY POSITIONS
-
-  ╭─────────────────────╮ ╭─────────────────────╮
-  │ LT4 LT3 LT2 LT1 LT0 │ │ RT0 RT1 RT2 RT3 RT4 │
-  │ LM4 LM3 LM2 LM1 LM0 │ │ RM0 RM1 RM2 RM3 RM4 │
-  │ LB4 LB3 LB2 LB1 LB0 │ │ RB0 RB1 RB2 RB3 RB4 │
-  ╰───────╮ LH2 LH1 LH0 │ │ RH0 RH1 RH2 ╭───────╯
-          ╰─────────────╯ ╰─────────────╯  
-ZMK_COMBO(name, bindings, keypos, layers, timeout, prior_idle, extra)
-
-    Create a combo that triggers binding if all keys in position keypos are pressed.
-
-    name: a unique identifier string
-    binding: a behavior instance that is triggered by the combo
-    keypos: a list of 2 or more key positions that activate the combo
-    layers (optional): a list of layers on which the combo can be activated (defaults to All)
-    timeout (optional): combo timeout in ms (defaults to COMBO_TERM, see below)
-    prior_idle (optional): require-prior-idle timout in ms (disabled by default)
-    extra (optional): additional configuration options (e.g., slow-release;)
-*/
-
 #define COMBO_TERM_FAST 25
 #define COMBO_TERM_SLOW 45
 
