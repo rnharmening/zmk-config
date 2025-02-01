@@ -122,16 +122,6 @@ ZMK_HOLD_TAP(smr, // slow HRM Right
     bindings = <&kp>, <&kp>;
 )
 
-#define COMBO_TERM_FAST 25
-#define COMBO_TERM_SLOW 45
-
-#define COMBO_IDLE_FAST 150
-#define COMBO_IDLE_SLOW 50
-
-
-ZMK_COMBO(mousecb, &smart_mouse, LT2 LT1,     DEFAULT, COMBO_TERM_FAST, COMBO_IDLE_FAST)
-
-
 
 / {
 
@@ -233,6 +223,14 @@ ZMK_COMBO(mousecb, &smart_mouse, LT2 LT1,     DEFAULT, COMBO_TERM_FAST, COMBO_ID
             require-prior-idle-ms = <250>;
             layers = <NAVIGA SYMBOL FUNCTN EXTRAS GAME MOUSE>;
             bindings = <&to DEFAULT>;
+        };
+
+        combo_mouse {
+            timeout-ms = <TMS>;
+            key-positions = <LT1 LT2>;
+            require-prior-idle-ms = <SHORT_IDLE>;
+            layers = <DEFAULT>;
+            bindings = <&to MOUSE>;
         };
 
         combo_navigation {
