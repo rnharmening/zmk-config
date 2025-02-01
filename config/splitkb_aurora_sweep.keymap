@@ -337,8 +337,8 @@ ZMK_HOLD_TAP(smr, // slow HRM Right
             mouse_layer {
         bindings = <
         &trans      &trans         &trans         &trans          &trans                &msc SCRL_LEFT &msc SCRL_DOWN &msc SCRL_UP &msc SCRL_RIGHT &trans
-        &trans      &trans         &mmv MOVE_UP   &trans          &trans                &trans         &mkb LCLK      &mkb MCLK    &mkb RCLK       &trans
-        &trans      &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &trans                &trans         &mkb MB4       &mkb MB5     &trans          &trans
+        &trans      &trans         &mmv MOVE_UP   &trans          &trans                &trans         &mkp LCLK      &mkp MCLK    &mkp RCLK       &trans
+        &trans      &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &trans                &trans         &mkp MB4       &mkp MB5     &trans          &trans
                                    &trans                         &trans                &trans                   &trans
         >;
         };
