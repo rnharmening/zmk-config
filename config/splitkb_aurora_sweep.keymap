@@ -335,12 +335,12 @@ ZMK_COMBO(mousecb, &smart_mouse, LT2 LT1,     DEFAULT, COMBO_TERM_FAST, COMBO_ID
         >;
         };
 
-            mouse_layer {
+            game3_layer {
         bindings = <
-        &trans      &trans         &trans         &trans          &trans                &msc SCRL_LEFT &msc SCRL_DOWN &msc SCRL_UP &msc SCRL_RIGHT &trans      
-        &trans      &trans         &mmv MOVE_UP   &trans          &trans                &trans         &mkb LCLK      &mkb MCLK    &mkb RCLK       &trans      
-        &trans      &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &trans                &trans         &mkb MB4       &mkb MB5     &trans          &trans
-                                   &trans                         &trans                &trans                   &trans          
+        &trans      &kp N1       &kp N2       &kp N3       &kp T                 &trans      &trans       &trans       &trans       &trans
+        &trans      &kp N4       &kp N5       &kp N6       &kp G                 &trans      &trans       &trans       &trans       &trans       
+        &trans      &kp N7       &kp N8       &kp N9       &kp B                 &trans      &trans       &trans       &trans       &trans       
+                                 &trans                    &trans                &trans                   &trans          
         >;
         };
 
