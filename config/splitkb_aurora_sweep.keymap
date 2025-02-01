@@ -37,9 +37,11 @@
 #define GAME2     6
 #define BLUETOOTH 7
 
-#define SHORT_IDLE 120
+#define SHORT_IDLE 50
 #define MEDIUM_IDLE 200
 #define LONG_IDLE 325
+#define QUICK_TAP_MS 125
+
 
 #define TMS 38
 
@@ -104,61 +106,44 @@ ZMK_TAP_DANCE(td_nav_fn_sft,
 
 // home row mods
 
-ZMK_HOLD_TAP(nlt,
+ZMK_HOLD_TAP(nlt, // normmal layer toggen
     flavor = "balanced";
     tapping-term-ms = <200>;
     bindings = <&kp>, <&kp>;
 )
 
-ZMK_HOLD_TAP(nml,
+ZMK_HOLD_TAP(fml, // fast HRM Left
     flavor = "balanced";
     tapping-term-ms = <200>;
-    quick-tap-ms = <0>;
-    hold-trigger-key-positions = <KEYS_R THUMBS KEYS_LT KEYS_LB>;
-    hold-trigger-on-release;
-    bindings = <&kp>, <&kp>;
-)
-ZMK_HOLD_TAP(nmr,
-    flavor = "balanced";
-    tapping-term-ms = <220>;
-    quick-tap-ms = <0>;
-    hold-trigger-key-positions = <KEYS_L THUMBS KEYS_RT KEYS_RB>;
-    hold-trigger-on-release;
-    bindings = <&kp>, <&kp>;
-)
-
-ZMK_HOLD_TAP(fml,
-    flavor = "balanced";
-    tapping-term-ms = <200>;
-    quick-tap-ms = <0>;
+    quick-tap-ms = <QUICK_TAP_MS>;
     require-prior-idle-ms = <SHORT_IDLE>;
     hold-trigger-key-positions = <KEYS_R THUMBS KEYS_LT KEYS_LB>;
     hold-trigger-on-release;
     bindings = <&kp>, <&kp>;
 )
-ZMK_HOLD_TAP(fmr,
+ZMK_HOLD_TAP(fmr, // fast HRM Right
     flavor = "balanced";
-    tapping-term-ms = <220>;
-    quick-tap-ms = <0>;
+    tapping-term-ms = <200>;
+    quick-tap-ms = <QUICK_TAP_MS>;
     require-prior-idle-ms = <SHORT_IDLE>;
     hold-trigger-key-positions = <KEYS_L THUMBS KEYS_RT KEYS_RB>;
     hold-trigger-on-release;
     bindings = <&kp>, <&kp>;
 )
 
-ZMK_HOLD_TAP(sml,
+ZMK_HOLD_TAP(sml, // slow HRM Left
     flavor = "balanced";
     tapping-term-ms = <280>;
-    quick-tap-ms = <0>;
+    quick-tap-ms = <QUICK_TAP_MS>;
     require-prior-idle-ms = <LONG_IDLE>;
     hold-trigger-key-positions = <KEYS_R THUMBS>;
     hold-trigger-on-release;
     bindings = <&kp>, <&kp>;
 )
-ZMK_HOLD_TAP(smr,
+ZMK_HOLD_TAP(smr, // slow HRM Right
     flavor = "balanced";
     tapping-term-ms = <280>;
-    quick-tap-ms = <0>;
+    quick-tap-ms = <QUICK_TAP_MS>;
     require-prior-idle-ms = <LONG_IDLE>;
     hold-trigger-key-positions = <KEYS_L THUMBS>;
     hold-trigger-on-release;
