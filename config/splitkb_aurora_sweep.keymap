@@ -14,7 +14,7 @@
 #include "zmk-helpers/key-labels/34.h" // 34 for aurora sweep
 
 #include "keys_de.h"
-#include "config/constants.dtsi"
+#include "constants.dtsi"
 
 
 &lt {
@@ -136,7 +136,7 @@ ZMK_HOLD_TAP(smr, // slow HRM Right
 
     };
 
-#include "config/combos.dtsi"
+#include "combos.dtsi"
 
     combos {
         compatible = "zmk,combos";
