@@ -23,8 +23,8 @@
 #define BLUETOOTH 8
 
 #define SHORT_IDLE 50
-#define MEDIUM_IDLE 200
-#define LONG_IDLE 325
+#define MEDIUM_IDLE 175
+#define LONG_IDLE 280
 #define QUICK_TAP_MS 125
 
 
