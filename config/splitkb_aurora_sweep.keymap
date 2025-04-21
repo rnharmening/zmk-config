@@ -215,7 +215,7 @@ ZMK_HOLD_TAP(smr, // slow HRM Right
         // Layer Toggle combos
         combo_default {
             timeout-ms = <TMS>;
-            key-positions = <RL1 RL2>;
+            key-positions = <RB1 RB2>;
             require-prior-idle-ms = <MEDIUM_IDLE>;
             layers = <NAVIGA SYMBOL FUNCTN EXTRAS GAME MOUSE>;
             bindings = <&to DEFAULT>;
