@@ -189,35 +189,35 @@ ZMK_HOLD_TAP(smr, // slow HRM Right
             bindings = <&kpt DE_AT>;
         };
 
-        combo_at {
+        combo_wsp1 {
             timeout-ms = <TMS>;
             key-positions = <LH1 LT4>;
             require-prior-idle-ms = <SHORT_IDLE>;
             layers = <DEFAULT>;
             bindings = <&kpt LG(N1)>;
         };
-        combo_at {
+        combo_wsp2 {
             timeout-ms = <TMS>;
             key-positions = <LH1 LT3>;
             require-prior-idle-ms = <SHORT_IDLE>;
             layers = <DEFAULT>;
             bindings = <&kpt LG(N2)>;
         };
-        combo_at {
+        combo_wsp3 {
             timeout-ms = <TMS>;
             key-positions = <LH1 LT2>;
             require-prior-idle-ms = <SHORT_IDLE>;
             layers = <DEFAULT>;
             bindings = <&kpt LG(N3)>;
         };
-        combo_at {
+        combo_wsp4 {
             timeout-ms = <TMS>;
             key-positions = <LH1 LT1>;
             require-prior-idle-ms = <SHORT_IDLE>;
             layers = <DEFAULT>;
             bindings = <&kpt LG(N4)>;
         };
-        combo_at {
+        combo_wsp5 {
             timeout-ms = <TMS>;
             key-positions = <LH1 LT0>;
             require-prior-idle-ms = <SHORT_IDLE>;
