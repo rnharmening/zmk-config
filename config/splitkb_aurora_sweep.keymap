@@ -189,6 +189,43 @@ ZMK_HOLD_TAP(smr, // slow HRM Right
             bindings = <&kpt DE_AT>;
         };
 
+        combo_at {
+            timeout-ms = <TMS>;
+            key-positions = <LH1 LT4>;
+            require-prior-idle-ms = <SHORT_IDLE>;
+            layers = <DEFAULT>;
+            bindings = <&kpt LG(N1)>;
+        };
+        combo_at {
+            timeout-ms = <TMS>;
+            key-positions = <LH1 LT3>;
+            require-prior-idle-ms = <SHORT_IDLE>;
+            layers = <DEFAULT>;
+            bindings = <&kpt LG(N2)>;
+        };
+        combo_at {
+            timeout-ms = <TMS>;
+            key-positions = <LH1 LT2>;
+            require-prior-idle-ms = <SHORT_IDLE>;
+            layers = <DEFAULT>;
+            bindings = <&kpt LG(N3)>;
+        };
+        combo_at {
+            timeout-ms = <TMS>;
+            key-positions = <LH1 LT1>;
+            require-prior-idle-ms = <SHORT_IDLE>;
+            layers = <DEFAULT>;
+            bindings = <&kpt LG(N4)>;
+        };
+        combo_at {
+            timeout-ms = <TMS>;
+            key-positions = <LH1 LT0>;
+            require-prior-idle-ms = <SHORT_IDLE>;
+            layers = <DEFAULT>;
+            bindings = <&kpt LG(N5)>;
+        };
+
+
         combo_caps {
             timeout-ms = <TMS>;
             key-positions = <LM0 RM0>;
@@ -304,7 +341,7 @@ ZMK_HOLD_TAP(smr, // slow HRM Right
 
             extra_layer {
         bindings = <
-        &trans               &trans       &trans       &trans       &trans               &trans       &kp DE_U_UMLAUT  &trans       &kp DE_O_UMLAUT &trans
+        &kp LG(N1)           &kp LG(N2)   &kp LG(N3)   &kp LG(N4)   &kp LG(N5)           &trans       &kp DE_U_UMLAUT  &trans       &kp DE_O_UMLAUT &trans
         &kp DE_A_UMLAUT      &kp DE_SZ    &trans       &trans       &trans               &trans       &trans           &trans       &trans          &trans
         &trans               &sel_from    &befundung   &trans       &trans               &trans       &kp DE_MU        &trans       &trans          &trans
                                           &trans                    &trans               &trans                    &trans          
@@ -315,7 +352,7 @@ ZMK_HOLD_TAP(smr, // slow HRM Right
         bindings = <
         &kp LALT    &kp Q        &kp W        &kp E        &kp R                 &trans      &trans       &trans       &trans       &trans       
         &kp LSFT    &kp A        &kp S        &kp D        &kp F                 &trans      &trans       &trans       &trans       &trans       
-        &kp LCTL    &kp DE_Z     &kp X        &kp C        &kp V                 &trans      &trans       &trans       &trans       &trans       
+        &kp LCTL    &kp DE_Y     &kp X        &kp C        &kp V                 &trans      &trans       &trans       &trans       &trans       
                                  &mo GAME2                 &kp SPACE             &to DEFAULT              &trans          
         >;
         };
