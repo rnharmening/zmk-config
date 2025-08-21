@@ -349,7 +349,7 @@ ZMK_HOLD_TAP(layerhold, // slow hold for e.g. mouse layer
 
             extra_layer {
         bindings = <
-        &kp LG(N1)           &kp LG(N2)   &kp LG(N3)   &kp LG(N4)   &kp LG(N5)           &trans       &kp DE_U_UMLAUT  &trans       &kp DE_O_UMLAUT &trans
+        &trans               &trans       &trans       &trans       &trans               &trans       &kp DE_U_UMLAUT  &trans       &kp DE_O_UMLAUT &trans
         &kp DE_A_UMLAUT      &kp DE_SZ    &trans       &trans       &trans               &trans       &trans           &trans       &trans          &trans
         &trans               &sel_from    &befundung   &trans       &trans               &trans       &kp DE_MU        &trans       &trans          &trans
                                           &trans                    &trans               &trans                    &trans          
