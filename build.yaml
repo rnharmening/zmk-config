@@ -24,7 +24,5 @@ include:
     shield: settings_reset
   - board: nice_nano//zmk
     shield: cradio_left
-    cmake-args: -DKEYMAP_FILE=config/34_personal.keymap
   - board: nice_nano//zmk
     shield: cradio_right
-    cmake-args: -DKEYMAP_FILE=config/34_personal.keymap
